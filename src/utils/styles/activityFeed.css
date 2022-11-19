@@ -1,0 +1,69 @@
+.content_items {
+    padding: 20px 0;
+}
+
+.card {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border-radius: 0.5rem;
+    border: 2px solid #b4b4b447;
+    transition: 100ms;
+    cursor: pointer;
+    transform: perspective(1000px) rotateY(var(--rotate-y, 0)) translateY(var(--translate-y, 0));
+}
+   
+.card_icon{
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.divider_text {
+    font-size: smaller;
+    font-weight: 700;
+    color: #666666;
+}
+
+.missed_call_icon {
+    margin-left: 20px;
+    margin-right: 10px;
+    color: #f35b5bcc;
+}
+
+.answered_call_icon {
+    margin-left: 20px;
+    margin-right: 10px;
+    color: #16c79a;
+}
+
+.card_title{
+    font-weight: bold;
+    color: #1a1a1abf;
+}
+
+.card_subtitle {
+    margin-top: 5px;
+    font-size: 0.63rem;
+    color: #333333bf;
+}
+
+.time{
+    font-size: 0.65rem;
+    font-weight: 500;
+    color: white;
+    background-color: #726f6fd4;
+    padding: 3px 10px;
+    border-radius: 5px 0 0 5px;
+}
+
+.dashed_divider {
+    margin-bottom: 10px !important;
+}
+
+.dashed_divider:before,
+.dashed_divider:after {
+    border-top: 1px dashed rgba(0, 0, 0, 0.2) !important;
+}

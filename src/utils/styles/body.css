@@ -1,0 +1,49 @@
+html, body, h1, h2, h3, ul, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+}
+  
+body {
+    background: #233142;
+    font-family: helvetica, arial, sans-serif;
+    font-size: 13px;
+    color: #333333;
+    line-height: 1;
+}
+
+.logo-lg { 
+    height: 100%;
+    width: 100%;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+.logo-lg svg {
+    width: 250px;
+    height: 120px;
+    filter: drop-shadow(4px 1px 4px rgb(0 0 0 / 0.5));
+}
+
+.logo-lg svg g:not(:nth-child(2)) path {
+    fill: #16C79A;
+}
+
+.txt_title_small {
+    color: gray;
+}
+
+.txt_title_large {
+    font-size: xx-large;
+    color: #16c79a;
+    font-weight: bolder;
+}
+
+.active_tab {
+    height: 50px;
+    border-bottom: 2px solid #87fdd5 !important;
+    border-radius: 0 !important;
+}

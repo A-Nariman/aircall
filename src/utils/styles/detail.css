@@ -1,0 +1,50 @@
+.title_from{
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    color: #726f6fab;
+    font-weight: 800;
+}
+
+.detailCard {
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+    margin-top: 40px;
+    padding: 10px 40px 0;
+    border-radius: 0.5rem;
+    border: 2px solid #b4b4b447;
+    background-color: #f8f8f82b;
+}
+
+.txt_card_info {
+    font-size: medium;
+    color: dimgray;
+    margin-bottom: 10px;
+}
+
+.txt_card_call_missed {
+    color: #f35b5bcc;
+    margin-bottom: 10px;
+    font-size: medium;
+    font-weight: 600;
+}
+
+.txt_card_call_answered {
+    color: #16c79a;
+    margin-bottom: 10px;
+    font-size: medium;
+    font-weight: 600;
+}
+
+.button_row {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #16c79a !important;
+    width: 50% !important;
+}

@@ -1,0 +1,22 @@
+.appbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: #16C79A !important;
+}
+
+.appbar_logo {
+    font-weight: 700 !important;
+    color: inherit;
+    text-decoration: none !important;
+    font-size: 1.5rem !important;
+    color: #87fdd5 !important;
+}
+
+.menu_items {
+    text-decoration: none;
+    color: white;
+    font-size: medium;
+    text-transform: capitalize;
+}
