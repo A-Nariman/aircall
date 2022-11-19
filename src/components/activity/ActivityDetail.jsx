@@ -1,6 +1,7 @@
 import { Button } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { useAppDispatch, useAppState, setItems } from "../../context/appContext";
 // ==========================================================
 
 const ActivityDetail = () => {
@@ -8,6 +9,9 @@ const ActivityDetail = () => {
     const navigate = useNavigate();
 
     const [selectedItem, setSelectedItem] = useState([]); 
+
+    const state     = useAppState();
+    const dispatch  = useAppDispatch();
 
     // Get parameters in the URL
     const params = useParams();
@@ -22,6 +26,20 @@ const ActivityDetail = () => {
     }, [params.id]);
 
 
+    // Updates items state
+    const updateUnarchivedItems = (id) => {
+        const newItems = state.items.filter((item) => item.id !== id);
+
+        setItems(dispatch, newItems);
+    }
+
+    // Updates archived list items state
+    const updateArchivedItems = (id) => {
+        const newItems = state.archived_items.filter((item) => item.id !== id);
+
+        setItems(dispatch, newItems);
+    }
+
     // Gets new object after changing the status of is_archived prop of selected item
     const archiveItem = () => {
         const requestOptions = {
@@ -31,7 +49,7 @@ const ActivityDetail = () => {
         };
         fetch(`https://aircall-job.herokuapp.com/activities/${selectedItem.id}`, requestOptions)
             .then(response => response.json())
-            .then(data => console.log(data))
+            .then(() => updateArchivedItems(selectedItem.id))
             .then(navigate('/archive'));
     }
 
@@ -44,7 +62,7 @@ const ActivityDetail = () => {
         };
         fetch(`https://aircall-job.herokuapp.com/activities/${selectedItem.id}`, requestOptions)
             .then(response => response.json())
-            .then(data => console.log(data))
+            .then(() => updateUnarchivedItems(selectedItem.id))
             .then(navigate('/activities'));
     }
 

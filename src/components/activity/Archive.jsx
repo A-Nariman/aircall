@@ -39,9 +39,10 @@ const Archive = () => {
         for (let i = 0; i < state.archived_items.length; i++) {
             fetch(`https://aircall-job.herokuapp.com/activities/${state.archived_items[i].id}`, requestOptions)
                 .then(response => response.json())
-                .then(data => console.log(data));
+                .then(data => console.log(data))
+                .then(navigate('/activities'));
         }
-        //wait to archive all data
+
         await delay(300);
     }
 

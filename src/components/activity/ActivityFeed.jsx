@@ -42,11 +42,11 @@ const ActivityFeed = () => {
         for (let i = 0; i < state.items.length; i++) {
             fetch(`https://aircall-job.herokuapp.com/activities/${state.items[i].id}`, requestOptions)
                 .then(response => response.json())
-                .then(data => console.log(data));
+                .then(data => console.log(data))
+                .then(navigate('/archive'));
         }
 
-        await delay(500);
-        window.location.reload(false);
+        await delay(300);
     }
 
     // Options for date
